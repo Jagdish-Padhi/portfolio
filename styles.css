@@ -1,0 +1,110 @@
+.wrapper{
+background-image: url(https://www.m3-solutions.net/wp-content/uploads/2022/11/HEX_Background.jpg);
+background-size:cover ;
+background-repeat: repeat-y;
+padding: 20px;
+
+}
+body{
+    display: flex;
+    flex-direction: column;
+    color: aliceblue;    
+}
+
+@keyframes font_color{
+  from{color: #7bfffb;}
+  to{color: rgb(255, 144, 236);}
+}
+
+.in{
+    font-family: "Prosto One", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    padding-left: 10%;
+    animation: font_color 2s alternate;
+    animation-iteration-count: infinite;
+    animation-delay: 2s;
+    transition: linear;
+    transition-duration: 2s;
+  }
+  .ed {
+    font-family: "Prosto One", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    width: 10%;
+    margin-left: 65%;
+    height: fit-content;
+    animation: font_color 2s alternate;
+    animation-iteration-count: infinite;
+    animation-delay: 2s;
+    transition: linear;
+    transition-duration: 2s;     
+    }
+  
+
+.intro{
+    font-family: "Iceland", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    width: 30%; 
+    padding-left: 5%;   
+  }
+
+.edu{
+    font-family: "Iceland", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    width: 90%;
+    display: flex;
+    margin-left: 5%;
+     
+}
+#edupara{
+    padding-left: 5%;
+    padding-top: 2%;   
+}
+
+img{
+    border-radius: 40%;
+    border-color: rgb(6, 6, 6);
+    border-width: 2px;
+    border-style: solid;
+}
+
+img:hover{
+  border-color: rgb(0, 229, 255);
+  transform: scale(1.1);
+  transition: linear;
+  transition-duration: 0.5s;
+  animation: img_border 1s alternate;
+  animation-iteration-count: infinite;
+}
+@keyframes font-color{
+  from{color: #8dfbda;}
+  to{color:rgb(255, 255, 255)}
+}
+p:hover{
+  animation: font-color 0.5s alternate-reverse;
+  animation-delay:0s ;
+  animation-iteration-count: infinite;
+  transform: scale(1.07);
+  transition: linear;
+  transition-duration: 3s;
+}
+
+@keyframes img_border{
+  from{border: 2px solid yellow ;
+  border-radius: 50%;}
+  to{border : 2px solid rgb(0, 255, 72) ;
+  border-radius:15%;}
+}
+
+
+
+
+ 
+
+
+
+
+ 
