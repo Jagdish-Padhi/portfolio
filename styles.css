@@ -7,28 +7,42 @@ padding: 20px;
 }
 body{
     display: flex;
-    flex-direction: column;
-    color: aliceblue;    
+    flex-direction: row;
+    color: aliceblue;
+    background-color: rgb(0, 0, 0);    
 }
 
 @keyframes font_color{
-  from{color: #7bfffb;}
-  to{color: rgb(255, 144, 236);}
+  from{color: #8000ff;}
+  to{color: rgb(0, 0, 0);}
 }
 
-.headings{
+.headButton{
     font-family: "Prosto One", sans-serif;
     font-weight: 400;
     font-style: normal;
-    padding-left: 10%;
     animation: font_color 2s alternate;
     animation-iteration-count: infinite;
     animation-delay: 2s;
     transition: linear;
     transition-duration: 2s;
   }
-  #ed{
-    padding-left: 60%;
+
+  button{
+    background-color: aquamarine;
+    border-radius: 100px;
+    height: 40px;
+    display: flex;
+    align-items: center; 
+  }
+
+  button:hover{
+    border: 2px yellow solid;
+    zoom: 110%;
+  }
+
+  #btn2{
+    margin-left: 60%;
   }
 
 #intro{
@@ -45,7 +59,7 @@ body{
     font-style: normal;
     width: 90%;
     display: flex;
-    margin-left: 5%;  
+    margin-left: 5%; 
 }
 #edupara{
     padding-left: 5%;
@@ -54,9 +68,8 @@ body{
 
 img{
     border-radius: 40%;
-    border-color: rgb(6, 6, 6);
-    border-width: 2px;
-    border-style: solid;
+    border: 2px solid black;
+    
 }
 
 img:hover{
@@ -68,7 +81,7 @@ img:hover{
   animation-iteration-count: infinite;
 }
 @keyframes font-color{
-  from{color: #8dfbda;}
+  from{color: #b1ffe8;}
   to{color:rgb(255, 255, 255)}
 }
 p:hover{
