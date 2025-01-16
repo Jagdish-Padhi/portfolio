@@ -1,111 +1,161 @@
-.wrapper{
-background-image: url(https://www.m3-solutions.net/wp-content/uploads/2022/11/HEX_Background.jpg);
-background-size:cover ;
-background-repeat: repeat-y;
-padding: 20px;
-
-}
-body{
-    display: flex;
-    flex-direction: row;
-    color: aliceblue;
-    background-color: rgb(0, 0, 0);    
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Playfair Display", serif;
+  font-weight: 600;
+  color: #fff;
+  background-color: #111;
+  overflow-x: auto;
+  position: relative;
 }
 
-@keyframes font_color{
-  from{color: #8000ff;}
-  to{color: rgb(0, 0, 0);}
+spline-viewer {
+  z-index: -1;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
 }
 
-.headButton{
-    font-family: "Prosto One", sans-serif;
-    font-weight: 400;
-    font-style: normal;
-    animation: font_color 2s alternate;
-    animation-iteration-count: infinite;
-    animation-delay: 2s;
-    transition: linear;
-    transition-duration: 2s;
-  }
-
-  button{
-    background-color: aquamarine;
-    border-radius: 100px;
-    height: 40px;
-    display: flex;
-    align-items: center; 
-  }
-
-  button:hover{
-    border: 2px yellow solid;
-    zoom: 110%;
-  }
-
-  #btn2{
-    margin-left: 60%;
-  }
-
-#intro{
-    font-family: "Iceland", sans-serif;
-    font-weight: 400;
-    font-style: normal;
-    width: 30%; 
-    padding-left: 5%;   
-  }
-
-#education{
-    font-family: "Iceland", sans-serif;
-    font-weight: 400;
-    font-style: normal;
-    width: 90%;
-    display: flex;
-    margin-left: 5%; 
-}
-#edupara{
-    padding-left: 5%;
-    padding-top: 2%;   
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  background: rgba(0, 0, 0, 0.7);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+  z-index: 1;
+  position: relative;
 }
 
-img{
-    border-radius: 40%;
-    border: 2px solid black;
-    
+.navbar .logo {
+  font-size: 1.8rem;
+  color: #bafffa;
+  font-family: "Iceland", sans-serif;
 }
 
-img:hover{
-  border-color: rgb(0, 229, 255);
+.navbar .nav-links {
+  list-style: none;
+  display: flex;
+  gap: 25px;
+}
+
+.navbar .nav-links li {
+  margin: 0;
+}
+
+.navbar .nav-links a {
+  text-decoration: none;
+  color: #fff;
+  font-size: 1.1rem;
+  padding: 8px 12px;
+  border-radius: 5px;
+  transition: 0.3s ease;
+}
+
+.navbar .nav-links a:hover {
+  background-color: #00ff99;
   transform: scale(1.1);
-  transition: linear;
-  transition-duration: 0.5s;
-  animation: img_border 1s alternate;
-  animation-iteration-count: infinite;
-}
-@keyframes font-color{
-  from{color: #b1ffe8;}
-  to{color:rgb(255, 255, 255)}
-}
-p:hover{
-  animation: font-color 0.5s alternate-reverse;
-  animation-delay:0s ;
-  animation-iteration-count: infinite;
-  transform: scale(1.07);
-  transition: linear;
-  transition-duration: 3s;
 }
 
-@keyframes img_border{
-  from{border: 2px solid yellow ;
-  border-radius: 50%;}
-  to{border : 2px solid rgb(0, 255, 72) ;
-  border-radius:15%;}
+/* Hamburger Menu */
+.hamburger {
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  cursor: pointer;
+}
+
+.hamburger .bar {
+  width: 25px;
+  height: 3px;
+  background-color: #fff;
+}
+
+/* Typing Effect */
+.typing-container {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.typing-text {
+  font-family: "Iceland", sans-serif;
+  font-weight: 500;
+  font-style: normal;
+  font-weight: 700;
+  
+  font-size: 3rem;
+  letter-spacing: 2px;
+  white-space: nowrap;
+  overflow: hidden;
+  display: inline-block;
+}
+
+.typing-word{
+  
+  font-size: 6rem;
+
+}
+
+/* Typing Word Container */
+.typing-word {
+  display: inline-block;
+  color: #5eff00;
+  overflow: hidden; /* Ensures content outside the box is hidden */
+  border-right: 2px solid #fffab5;
+  white-space: nowrap; /* Prevents line breaks */
+  animation: typing-erasing 5s steps(13) infinite, border-blink 0.7s steps(1) infinite; 
 }
 
 
-
-
+@keyframes typing-erasing {
+  0%,100% {
+    width: 0;
+  }
+  60%,80% {
+    width: 100%; 
+  }
  
+}
+
+@keyframes border-blink {
+  0%,100% {
+    border-color: #bafffa; /
+  }
+  50% {
+    border-color: transparent; 
+  }
+}
 
 
+@media (max-width: 768px) {
+  .navbar .nav-links {
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    background: rgba(0, 0, 0, 0.8);
+    position: absolute;
+    top: 60px;
+    left: 0;
+    padding: 20px 0;
+    width: 100%;
+  }
 
+  .navbar .nav-links.active {
+    display: flex;
+  }
 
- 
+  .hamburger {
+    display: flex;
+  }
+
+  .navbar .nav-links a {
+    font-size: 1.5rem;
+    padding: 12px 20px;
+  }
+
+  .section h1 {
+    font-size: 2rem;
+  }
+}
