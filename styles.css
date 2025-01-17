@@ -50,12 +50,12 @@ spline-viewer {
   color: #fff;
   font-size: 1.1rem;
   padding: 8px 12px;
-  border-radius: 5px;
-  transition: 0.3s ease;
+  border-radius: 11px;
 }
 
 .navbar .nav-links a:hover {
-  background-color: #00ff99;
+  background-color: #000000;
+  border: 1px solid rgb(137, 255, 249);
   transform: scale(1.1);
 }
 
